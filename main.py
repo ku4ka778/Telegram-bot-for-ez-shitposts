@@ -42,3 +42,15 @@ if selection == '1':
         with TelegramClient(session_name, api_id, api_hash) as client:
             client.loop.run_until_complete(main())
 
+elif selection == '2':
+    #Need to send pictures
+    #Sending
+    async def main():
+        text = input('Send: ')
+        await client.start()
+        await client.send_message('@stolen_overcoat', text)
+
+
+    if __name__ == '__main__':
+        with TelegramClient(session_name, api_id, api_hash) as client:
+            client.loop.run_until_complete(main())
